@@ -1,0 +1,3 @@
+salidaX:0
+salidaY:0
+dimension:8

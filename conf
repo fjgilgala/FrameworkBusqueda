@@ -1,0 +1,10 @@
+problema:Laberinto
+paquete_implementaciones_heuristicos:laberinto.heuristicos
+ruta_implementacion_parser:laberinto.ParserLaberinto
+algoritmo:A
+abierta:BHeap
+heuristicos:HManhatan
+profundidadMaxima:10000 
+frecuenciaLookAHead:1000 
+timeout:5
+trazable:true 
