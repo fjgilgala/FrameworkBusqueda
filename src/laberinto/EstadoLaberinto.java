@@ -94,6 +94,5 @@ public class EstadoLaberinto extends EstadoBasic {
 			tablero[padre.x][padre.y] = 2;
 			padre = padre.papi;
 		}
-		System.out.println();
 	}
 }

@@ -4,7 +4,7 @@ import framework.Estado;
 import framework.Heuristico;
 import laberinto.EstadoLaberinto;
 
-public class HManhatan implements Heuristico {
+public class HNull implements Heuristico {
 
 	@Override
 	public int calcula(Estado nodo) {

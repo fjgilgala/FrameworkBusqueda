@@ -7,8 +7,6 @@ import framework.util.HeuristicoActivo;
 
 public abstract class EstadoBasic implements Estado {
 
-	public abstract void generaEstadoInicial();
-
 	public abstract List<Estado> expandir();
 
 	public abstract boolean esSolucion();
@@ -53,6 +51,10 @@ public abstract class EstadoBasic implements Estado {
 	@Override
 	public Estado solucionVoraz() {
 		return null;
+	}
+
+	@Override
+	public void generaEstadoInicial() {
 	}
 
 	@Override

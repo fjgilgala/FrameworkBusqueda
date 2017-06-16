@@ -37,10 +37,7 @@ public class ParserLaberinto extends ParserBasic {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		ValoresInstanciaLaberinto.tableroInicial = new int[tablero.length][tablero.length];
-		for (int i = 0; i < tablero.length; i++)
-			for (int j = 0; j < tablero.length; j++)
-				ValoresInstanciaLaberinto.tableroInicial[i][j] = tablero[i][j];
+		ValoresInstanciaLaberinto.tableroInicial = ValoresInstanciaLaberinto.clona(tablero);
 		return new EstadoLaberinto(tablero);
 	}
 }
