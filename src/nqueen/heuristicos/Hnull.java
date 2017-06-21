@@ -1,10 +1,10 @@
 package nqueen.heuristicos;
 
 import framework.Estado;
-import framework.Heuristico;
+import framework.basic.Hbasic;
 import nqueen.EstadoReinas;
 
-public class Hnull implements Heuristico {
+public class Hnull extends Hbasic {
 
 	@Override
 	public int calcula(Estado nodo) {
@@ -13,10 +13,5 @@ public class Hnull implements Heuristico {
 
 	protected int valorHeuristico(EstadoReinas estado) {
 		return 0;
-	}
-	
-	@Override
-	public String toString() {
-		return this.getClass().getName().replaceAll("nqueen.heuristicos.", "");
 	}
 }

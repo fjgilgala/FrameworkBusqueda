@@ -22,7 +22,7 @@ public class Writer {
 
 	private static BufferedWriter bw;
 
-	private static String cuadroTiempo, cuadroSimetrias, cuadroExpandidos, cuadroGenerados, cuadroCotaInferior,
+	private static String cuadroTiempo, cuadroEstadosRepetidos, cuadroExpandidos, cuadroGenerados, cuadroCotaInferior,
 			cuadroSolucion, cuadroEncontrarSolucion;
 
 	private static List<Heuristico> heuristicos = Configuracion.heuristicos;
@@ -47,7 +47,7 @@ public class Writer {
 			cuadroExpandidos = cuadroGenerados = cuadroTiempo = cuadroCotaInferior = cuadroSolucion = cuadroEncontrarSolucion = " ";
 			for (Heuristico h : heuristicos) {
 				cuadroExpandidos += ";" + algoritmo + " " + h;
-				cuadroSimetrias += ";" + algoritmo + " " + h;
+				cuadroEstadosRepetidos += ";" + algoritmo + " " + h;
 				cuadroGenerados += ";" + algoritmo + " " + h;
 				cuadroTiempo += ";" + algoritmo + " " + h;
 				cuadroCotaInferior += ";" + algoritmo + " " + h;
@@ -60,7 +60,7 @@ public class Writer {
 
 			bw.write("\n\n\n" + "Nodos expandidos\n" + cuadroExpandidos + "\n");
 			bw.write("\n\n" + "Nodos generados\n" + cuadroGenerados + "\n");
-			bw.write("\n\n" + "Simetrias\n" + cuadroSimetrias + "\n");
+			bw.write("\n\n" + "Estados Repetidos\n" + cuadroEstadosRepetidos + "\n");
 			bw.write("\n\n" + "Tiempo\n" + cuadroTiempo + "\n");
 			bw.write("\n\n" + "Tiempo en encontrar la solucion\n" + cuadroEncontrarSolucion + "\n");
 			bw.write("\n\n" + "Cota inferior\n" + cuadroCotaInferior + "\n");
@@ -81,16 +81,18 @@ public class Writer {
 
 	private static void ejecutaInstancia(String instancia, List<Heuristico> heuristicos) throws IOException {
 		if (Configuracion.trazable)
-			System.out.println("Ejecutando:" + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", ""));
-		cuadroTiempo += "\n" + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "");
-		cuadroExpandidos += "\n" + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "");
-		cuadroGenerados += "\n" + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "");
-		cuadroCotaInferior += "\n" + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "");
-		cuadroSolucion += "\n" + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "");
-		cuadroEncontrarSolucion += "\n" + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "");
-		cuadroSimetrias += "\n" + instancia.replaceFirst("instancias/i", "").replaceFirst(".txt", "");
-		bw.write(instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "") + "\n"
-				+ ";coste;tiempo;generados;expandidos;simetricas;cota inferior final;cota inferior inicial;resultado\n");
+			System.out.println(
+					"Ejecutando:" + instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", ""));
+		cuadroTiempo += "\n" + instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "");
+		cuadroExpandidos += "\n" + instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "");
+		cuadroGenerados += "\n" + instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "");
+		cuadroCotaInferior += "\n" + instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "");
+		cuadroSolucion += "\n" + instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "");
+		cuadroEncontrarSolucion += "\n"
+				+ instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "");
+		cuadroEstadosRepetidos += "\n" + instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "");
+		bw.write(instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "") + "\n"
+				+ ";coste;tiempo;generados;expandidos;estados repetidos;cota inferior final;cota inferior inicial;resultado\n");
 		for (Heuristico h : heuristicos)
 			interpretaResultados(instancia, h);
 	}
@@ -144,7 +146,7 @@ public class Writer {
 		cuadroExpandidos += ";" + Metrica.expandidos;
 		cuadroGenerados += ";" + Metrica.generados;
 		cuadroCotaInferior += ";" + Metrica.cotaInferiorFinal;
-		cuadroSimetrias += ";" + Metrica.simetrias;
+		cuadroEstadosRepetidos += ";" + Metrica.simetrias;
 		if (estado != null) {
 			cuadroSolucion += ";" + Metrica.solucion.g();
 			if (Metrica.tiempoEncontrarCotaSuperior() > 0)

@@ -15,8 +15,9 @@ public class EjecutorInstancia {
 
 		if (Configuracion.trazable) {
 			Calendar cal1 = Calendar.getInstance();
-			System.out.println("-> Ejecutando " + instancia.replaceFirst("instancias/", "").replaceFirst(".txt", "")
-					+ " con " + algoritmo + " y " + heuristico + " ["
+			System.out.println("-> Ejecutando "
+					+ instancia.replaceFirst(Configuracion.sDirectorio, "").replaceFirst(".txt", "") + " con "
+					+ algoritmo + " y " + heuristico + " ["
 					+ (cal1.get(Calendar.HOUR) + ":" + cal1.get(Calendar.MINUTE) + ":" + cal1.get(Calendar.SECOND))
 					+ "]");
 		}
@@ -46,7 +47,7 @@ public class EjecutorInstancia {
 
 		System.out.println("--> Nodos expandidos:" + Metrica.expandidos);
 		System.out.println("--> Nodos generados:" + Metrica.generados);
-		System.out.println("--> Simetrias:" + Metrica.simetrias);
+		System.out.println("--> Estados repetidos:" + Metrica.simetrias);
 
 		if (Metrica.OutTime) {
 			if (estado != null)

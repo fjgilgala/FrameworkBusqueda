@@ -1,4 +1,4 @@
-package asignaciontrabajos.parser;
+package asignaciontrabajos;
 
 import java.io.File;
 import java.util.ArrayList;

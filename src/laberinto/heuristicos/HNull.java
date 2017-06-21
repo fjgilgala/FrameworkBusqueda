@@ -1,10 +1,10 @@
 package laberinto.heuristicos;
 
 import framework.Estado;
-import framework.Heuristico;
+import framework.basic.Hbasic;
 import laberinto.EstadoLaberinto;
 
-public class HNull implements Heuristico {
+public class Hnull extends Hbasic {
 
 	@Override
 	public int calcula(Estado nodo) {
@@ -13,10 +13,5 @@ public class HNull implements Heuristico {
 
 	protected int valorHeuristico(EstadoLaberinto estado) {
 		return 0;
-	}
-
-	@Override
-	public String toString() {
-		return this.getClass().getName().replaceAll("nqueen.heuristicos.", "");
 	}
 }

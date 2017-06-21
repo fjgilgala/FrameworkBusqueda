@@ -21,4 +21,8 @@ public class Configuracion {
 	public static int timeout;
 	public static boolean trazable;
 	public static Parser parser;
+	public static String sDirectorio;
+	public static String archivoconfig;
+	public static String patch_parser;
+	public static String paquete_heuristicos;
 }

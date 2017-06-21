@@ -17,7 +17,11 @@ public class EstadoLaberinto extends EstadoBasic {
 
 	public EstadoLaberinto(int[][] tablero) {
 		this.tablero = tablero;
-		generaEstadoInicial();
+		profundidad = 0;
+		dim = tablero.length + 1;
+		x = ValoresInstanciaLaberinto.posicionInicialX;
+		y = ValoresInstanciaLaberinto.posicionInicialY;
+		calculaHeuristico();
 	}
 
 	public EstadoLaberinto(int[][] tablero, int profundidad, int x, int y, EstadoLaberinto papi) {
@@ -28,7 +32,6 @@ public class EstadoLaberinto extends EstadoBasic {
 		this.y = y;
 		this.tablero[x][y] = 2;
 		this.papi = papi;
-		calculaHeuristico();
 	}
 
 	@Override
@@ -66,15 +69,6 @@ public class EstadoLaberinto extends EstadoBasic {
 			resultado.add(new EstadoLaberinto(tablero, getProfundidad() + 1, x - 1, y, this));
 		}
 		return resultado;
-	}
-
-	@Override
-	public void generaEstadoInicial() {
-		profundidad = 0;
-		dim = tablero.length + 1;
-		x = ValoresInstanciaLaberinto.posicionInicialX;
-		y = ValoresInstanciaLaberinto.posicionInicialY;
-		calculaHeuristico();
 	}
 
 	@Override

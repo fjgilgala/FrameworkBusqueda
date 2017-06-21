@@ -4,7 +4,7 @@ import caballoajedrez.EstadoCaballoAjedrez;
 import framework.Estado;
 import framework.Heuristico;
 
-public class HNull implements Heuristico {
+public class Hnull implements Heuristico {
 
 	@Override
 	public int calcula(Estado nodo) {
