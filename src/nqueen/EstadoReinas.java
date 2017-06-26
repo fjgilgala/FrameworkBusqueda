@@ -37,10 +37,7 @@ public class EstadoReinas extends EstadoBasic {
 
 	@Override
 	public boolean esSolucion() {
-		if (profundidad == numeroReinas)
-			return true;
-		else
-			return false;
+		return profundidad == numeroReinas;
 	}
 
 	@Override
@@ -83,7 +80,7 @@ public class EstadoReinas extends EstadoBasic {
 				if (sol[j] == i)
 					cad.append("X");
 				else
-					cad.append("?");
+					cad.append("0");
 			cad.append("\n");
 		}
 		return cad.toString();

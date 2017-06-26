@@ -4,7 +4,7 @@ import asignaciontrabajos.busqueda.EstadoAsignacionTrabajosMaquina;
 import asignaciontrabajos.heuristicos.HeuristicoPlanificacionTareas;
 import framework.util.Metrica;
 
-public class Hmax extends HeuristicoPlanificacionTareas {
+public class Hmax_sum extends HeuristicoPlanificacionTareas {
 
 	@Override
 	protected int valorHeuristico(EstadoAsignacionTrabajosMaquina estado) {
@@ -12,6 +12,6 @@ public class Hmax extends HeuristicoPlanificacionTareas {
 		if (h2 >= Metrica.cotaSuperior)
 			return h2;
 		else
-			return Math.max(h2, new Hedd_all().calcula(estado));
+			return Math.max(h2, new Hedd_sum_all().calcula(estado));
 	}
 }

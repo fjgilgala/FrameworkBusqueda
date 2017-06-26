@@ -15,10 +15,14 @@ public abstract class LinkedList implements ABIERTA {
 
 	@Override
 	public void añadir(Estado nodo) {
-		NodeList new_node = head;
-		while (new_node.Next != null)
-			new_node = new_node.Next;
-		new_node.Next = new NodeList(nodo);
+		if (size == 0) {
+			head = new NodeList(nodo);
+		} else {
+			NodeList new_node = head;
+			while (new_node.Next != null)
+				new_node = new_node.Next;
+			new_node.Next = new NodeList(nodo);
+		}
 		size++;
 	}
 

@@ -44,7 +44,6 @@ public abstract class AlgoritmoBusqueda {
 		} catch (TimeoutException e) {
 			Metrica.OutTime = true;
 		} catch (ExecutionException e) {
-			e.printStackTrace();
 			Metrica.OutMemory = true;
 		} finally {
 			Metrica.para();

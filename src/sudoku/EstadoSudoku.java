@@ -12,8 +12,6 @@ public class EstadoSudoku extends EstadoBasic {
 	public int posicion;
 	private final int n = 9;
 
-	public EstadoSudoku papi;
-
 	public EstadoSudoku(int[][] tablero) {
 		this.tablero = tablero;
 		profundidad = 0;
@@ -21,13 +19,12 @@ public class EstadoSudoku extends EstadoBasic {
 		calculaHeuristico();
 	}
 
-	public EstadoSudoku(int[][] tablero, int posicion, int k, int profundidad, EstadoSudoku papi) {
+	public EstadoSudoku(int[][] tablero, int posicion, int k, int profundidad) {
 		this.tablero = ValoresInstanciaSudoku.clona(tablero);
 		this.profundidad = profundidad;
 		this.g = profundidad;
 		this.posicion = posicion;
 		this.tablero[posicion / n][posicion % n] = k;
-		this.papi = papi;
 	}
 
 	@Override
@@ -48,7 +45,7 @@ public class EstadoSudoku extends EstadoBasic {
 			if (fila(posicionNueva / n, k) && columna(posicionNueva % n, k)
 					&& region(posicionNueva / n, posicionNueva % n, k)) {
 				Metrica.genera();
-				resultado.add(new EstadoSudoku(tablero, posicionNueva, k, getProfundidad() + 1, papi));
+				resultado.add(new EstadoSudoku(tablero, posicionNueva, k, getProfundidad() + 1));
 			}
 		}
 		return resultado;
@@ -90,6 +87,6 @@ public class EstadoSudoku extends EstadoBasic {
 
 	@Override
 	public boolean esSolucion() {
-		return (posicion == (n * n) - 1);
+		return buscarCero(posicion) == -1;
 	}
 }

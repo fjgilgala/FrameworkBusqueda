@@ -75,18 +75,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="asignaciontrabajos.parser.ParserAsignacionTrabajosMaquina" 
-    project="FrameworkBusqueda" 
-    file="/FrameworkBusqueda/src/asignaciontrabajos/parser/ParserAsignacionTrabajosMaquina.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="892" y="-10"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="asignaciontrabajos.heuristicos.HeuristicoPlanificacionTareas" 
+  <class id="9" language="java" name="asignaciontrabajos.heuristicos.HeuristicoPlanificacionTareas" 
     project="FrameworkBusqueda" 
     file="/FrameworkBusqueda/src/asignaciontrabajos/heuristicos/HeuristicoPlanificacionTareas.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -97,7 +86,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="asignaciontrabajos.heuristicos.implementaciones.Hcapacidad_estricto" 
+  <class id="10" language="java" name="asignaciontrabajos.heuristicos.implementaciones.Hcapacidad_estricto" 
     project="FrameworkBusqueda" 
     file="/FrameworkBusqueda/src/asignaciontrabajos/heuristicos/implementaciones/Hcapacidad_estricto.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -108,7 +97,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="asignaciontrabajos.heuristicos.implementaciones.Hcapacidad_relajado" 
+  <class id="11" language="java" name="asignaciontrabajos.heuristicos.implementaciones.Hcapacidad_relajado" 
     project="FrameworkBusqueda" 
     file="/FrameworkBusqueda/src/asignaciontrabajos/heuristicos/implementaciones/Hcapacidad_relajado.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -119,7 +108,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="asignaciontrabajos.busqueda.EstadoAsignacionTrabajosMaquina" 
+  <class id="12" language="java" name="asignaciontrabajos.busqueda.EstadoAsignacionTrabajosMaquina" 
     project="FrameworkBusqueda" 
     file="/FrameworkBusqueda/src/asignaciontrabajos/busqueda/EstadoAsignacionTrabajosMaquina.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -130,7 +119,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="asignaciontrabajos.edd.EDD" project="FrameworkBusqueda" 
+  <class id="13" language="java" name="asignaciontrabajos.edd.EDD" project="FrameworkBusqueda" 
     file="/FrameworkBusqueda/src/asignaciontrabajos/edd/EDD.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="452" y="-94"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -139,104 +128,142 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="15">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
+  <class id="14" language="java" name="asignaciontrabajos.ParserAsignacionTrabajosMaquina" project="FrameworkBusqueda" 
+    file="/FrameworkBusqueda/src/asignaciontrabajos/ParserAsignacionTrabajosMaquina.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="812" y="716"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="framework.basic.ParserBasic" project="FrameworkBusqueda" 
+    file="/FrameworkBusqueda/src/framework/basic/ParserBasic.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="992" y="424"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
   <dependency id="16">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
   <dependency id="17">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <realization id="18">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <association id="19">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="20" name="sucesores">        
-        <position height="19" width="67" x="322" y="524"/>      
-      </attribute>      
-      <multiplicity id="21" minimum="0" maximum="2147483647">        
-        <position height="17" width="23" x="357" y="540"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="22">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="23">    
     <bendpoint x="516" y="250"/>    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="7"/>  
   </dependency>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="10"/>  
+  <generalization id="18">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
   </generalization>  
-  <generalization id="25">    
+  <dependency id="19">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="20">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="22">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <realization id="26">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <generalization id="27">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="28">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <dependency id="29">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <dependency id="30">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <association id="31">    
+  <association id="23">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="32" name="ABIERTA">        
-        <position height="19" width="62" x="553" y="494"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1">        
-        <position height="17" width="25" x="580" y="511"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="34">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <realization id="35">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <association id="36">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="37" name="solucion">        
+      <attribute id="24" name="solucion">        
         <position height="19" width="57" x="402" y="489"/>      
       </attribute>      
-      <multiplicity id="38" minimum="0" maximum="1">        
+      <multiplicity id="25" minimum="0" maximum="1">        
         <position height="17" width="25" x="429" y="505"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="39">    
+  <dependency id="26">    
+    <bendpoint x="816" y="674"/>    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="28">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <dependency id="29">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="30">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="31" name="sucesores">        
+        <position height="19" width="67" x="322" y="524"/>      
+      </attribute>      
+      <multiplicity id="32" minimum="0" maximum="2147483647">        
+        <position height="17" width="23" x="357" y="540"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="33">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="34">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="35">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <dependency id="36">    
+    <bendpoint x="812" y="846"/>    
+    <bendpoint x="484" y="848"/>    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <association id="38">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="39" name="ABIERTA">        
+        <position height="19" width="62" x="553" y="494"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="17" width="25" x="580" y="511"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="41">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <generalization id="42">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="44">    
     <bendpoint x="996" y="274"/>    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="3"/>  
