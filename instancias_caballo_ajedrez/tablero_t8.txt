@@ -1,0 +1,3 @@
+dimension:8
+posicionX:4
+posicionY:4

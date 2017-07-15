@@ -1,0 +1,4 @@
+problema:NQueen
+paquete_implementaciones_heuristicos:nqueen.heuristicos
+ruta_implementacion_parser:nqueen.ParserNQueen
+directorio_instancias:instancias_nqueen

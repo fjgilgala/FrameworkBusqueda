@@ -1,0 +1,4 @@
+problema:ATMCV
+paquete_implementaciones_heuristicos:asignaciontrabajos.heuristicos.implementaciones
+ruta_implementacion_parser:asignaciontrabajos.ParserAsignacionTrabajosMaquina
+directorio_instancias:instancias_ATMCV

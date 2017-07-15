@@ -1,0 +1,4 @@
+problema:Laberinto
+paquete_implementaciones_heuristicos:laberinto.heuristicos
+ruta_implementacion_parser:laberinto.ParserLaberinto
+directorio_instancias:instancias_laberinto

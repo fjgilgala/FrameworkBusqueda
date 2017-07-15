@@ -1,0 +1,3 @@
+dimension:4
+posicionX:0
+posicionY:0

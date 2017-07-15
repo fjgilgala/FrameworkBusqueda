@@ -1,10 +1,8 @@
-problema:Laberinto
-paquete_implementaciones_heuristicos:laberinto.heuristicos
-ruta_implementacion_parser:laberinto.ParserLaberinto
-algoritmo:A
+archivo_conf:asignaciontrabajosmaquina
+algoritmo:ALookAHead_Voraz
 abierta:BHeap
-heuristicos:HManhatan
+heuristicos:Hmax
 profundidadMaxima:10000 
 frecuenciaLookAHead:1000 
-timeout:5
-trazable:true 
+timeout:15
+trazable:true

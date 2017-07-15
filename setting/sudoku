@@ -1,0 +1,4 @@
+problema:Sudoku
+paquete_implementaciones_heuristicos:sudoku.heuristicos
+ruta_implementacion_parser:sudoku.ParserSudoku
+directorio_instancias:instancias_sudoku

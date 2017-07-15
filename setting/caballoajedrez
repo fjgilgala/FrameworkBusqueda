@@ -1,0 +1,4 @@
+problema:Caballo Ajedrez
+paquete_implementaciones_heuristicos:caballoajedrez.heuristicos
+ruta_implementacion_parser:caballoajedrez.ParserCaballoAjedrez
+directorio_instancias:instancias_caballo_ajedrez
